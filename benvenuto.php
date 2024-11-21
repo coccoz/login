@@ -8,14 +8,17 @@
         header("Location: errore.php");
 
     }
-
-    $current = time();
-
-    if($current - $_SESSION["date"] > 20)
+    else
     {
-        header("Location: expired.php");
+        $current = time();
 
-    }   
+        if($current - $_SESSION["date"] > 20)
+        {
+            header("Location: expired.php");
+
+        }  
+    }
+     
 
 
     //header('Location: ./expired.php');
