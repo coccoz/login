@@ -14,6 +14,10 @@
         $_SESSION["login_user"] = $username;
         //$_SESSION["login_pass"] = $password;
 
+        $date = time();
+        $_SESSION["date"] = $date;
+
+
         header('Location: ./benvenuto.php');
             
     } else {

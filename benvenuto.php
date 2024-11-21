@@ -1,13 +1,26 @@
 <?php
-    setcookie ("PHPSESSID", "2suuvrf873s6tj9ec77t2cbk2s", time()-1);
     session_unset();
     session_start();
+
 
     if(!isset($_SESSION["login_user"]))
     {
         header("Location: errore.php");
 
     }
+
+    $current = time();
+
+    if($current - $_SESSION["date"] > 20)
+    {
+        header("Location: expired.php");
+
+    }   
+
+
+    //header('Location: ./expired.php');
+    
+    
 ?>
 
 <!DOCTYPE html>
@@ -22,5 +35,6 @@
     <br>
     <br>
     <a href="./logout.php"><p>premi per effettuare il logout</p></a>
+    
 </body>
 </html>

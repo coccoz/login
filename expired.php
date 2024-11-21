@@ -1,9 +1,3 @@
-<?php
-    session_start();
-    setcookie ("PHPSESSID", "2suuvrf873s6tj9ec77t2cbk2s", time()-1);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <p>logout effettuato</p>
+    <p>la tua sessione è scaduta</p><br>
     <a href="./login.html"><button>torna al login</button></a>
 
-    
 </body>
 </html>
